@@ -1,0 +1,3 @@
+chromadb[all]
+pretext
+openai
