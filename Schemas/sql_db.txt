@@ -1,0 +1,18 @@
+CREATE TABLE Memories (
+    id   INTEGER PRIMARY KEY AUTOINCREMENT,
+    Note TEXT
+);
+
+CREATE TABLE Progress (
+    id         INTEGER PRIMARY KEY AUTOINCREMENT,
+    Topic      INTEGER REFERENCES Topics (id),
+    Confidence INTEGER,
+    Notes      TEXT
+);
+
+CREATE TABLE Topics (
+    id               INTEGER PRIMARY KEY AUTOINCREMENT,
+    [Parent Section]         REFERENCES Topics (id),
+    Section          TEXT,
+    Embedding        TEXT
+);
